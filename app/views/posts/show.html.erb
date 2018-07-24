@@ -4,7 +4,7 @@
 		<div class="post">
 		<div class="[ col-xs-12  col-sm-11 .col-md-11 .col-lg-11 ]">
 			<div id="ed">
-				<% if current_user != nil and current_user.admin %>
+				<% if current_user != nil and current_user.admin or current_user.moderator %>
 						<%= link_to "Edit",  edit_post_path %> or
 						<%= link_to "Delete", post_path, data: {confirm: 'Точно видалити данний пост?'}, method: :delete %>
 				<%end%>

@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, except:[:new,:create,:index]
 
   def new
-    if current_user.admin
+    if current_user.admin or current_user.moderator
       @post = Post.new
     else
       redirect_to not_permission_path
@@ -38,7 +38,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    if current_user.admin
+    if current_user.admin or current_user.moderator
     else
       redirect_to not_permission_path
     end

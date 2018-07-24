@@ -7,7 +7,7 @@ class EventsController < ApplicationController
   end
 
 def new
-    if current_user.admin
+    if current_user.admin or current_user.moderator
       @event = Event.new
     else
       redirect_to not_permission_path
@@ -30,7 +30,7 @@ def new
   end
 
   def edit
-    if current_user.admin
+    if current_user.admin or current_user.moderator
 
     else
       redirect_to not_permission_path

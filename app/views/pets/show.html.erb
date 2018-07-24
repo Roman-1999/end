@@ -1,6 +1,13 @@
 <br>
 <p id="notice"><%= notice %></p>
 
+			<div id="ed">
+				<% if current_user != nil and current_user.admin or current_user.moderator %>
+						<%= link_to "Edit",  edit_pet_path %> or
+						<%= link_to "Delete", pet_path, data: {confirm: 'Точно видалити данний пост?'}, method: :delete %>
+				<%end%>
+			</div>
+
 <p>
   <strong>Image:</strong>
   <p><%= image_tag @pet.image.url %></p>

@@ -8,7 +8,7 @@
     <% category.predmets.each do |predmet|%>
 
       <div class="ram">
-        <%= @i.to_s + " пара: " %><%= predmet.name %>
+        <%= @i.to_s + ". " %><%= predmet.name %>
       </div>
       <% @i+=1 %>
     <% end %>
