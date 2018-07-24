@@ -11,10 +11,10 @@
 	<%= f.text_field :venume_det, autofocus: true, class: 'form-control', placeholder: 'Name institution', required: true  %>
 	<br/>
 	<p><%= f.label "Тип" %></p>
-	<%= f.select :etupe, ['Концерт','Екскурсія','Вистава','Збори'] %><br />
+	<%= f.select :etupe, ['Концерт','Екскурсія','Вистава','Збори', ''] %><br />
 	<br/>
 	<p><%= f.label "Вхід" %></p>
-	<%= f.select :ecost, ['Безкоштовний','Платний'] %><br />
+	<%= f.select :ecost, ['Безкоштовний','Платний', ''] %><br />
 	<br/>
 	<p><%= f.label "Інформація" %></p>
 	<div class="tiny"><%= f.text_area :einfo, :class => "tinymce", :rows => 10, :cols => 50 %><br/>
